@@ -1,5 +1,6 @@
 import './styles/index.css';
-import { chart } from './d3Visualisations/columnChart';
+import { columnChart } from './d3Visualisations/columnChart';
+import { barChart } from './d3Visualisations/barChart';
 import { orderedList } from './d3Visualisations/orderedList';
 import { randomiseData } from './utilities/dataUtilities';
 
@@ -13,9 +14,11 @@ const data = randomiseData(
 );
 
 const listVis = orderedList(data);
-const columnChart = chart(data);
+const columnChart1 = columnChart(data);
+const barChart1 = barChart(data);
 
-document.querySelector('#app-d3ChartRoot').appendChild(columnChart);
+document.querySelector('#app-d3ColumnChartRoot').appendChild(columnChart1);
+document.querySelector('#app-d3BarChartRoot').appendChild(barChart1);
 document.querySelector('#app-d3ListRoot').appendChild(listVis);
 
 function getListener(e) {

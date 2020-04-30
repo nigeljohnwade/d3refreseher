@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-export function chart(
+export function columnChart(
     data,
     width = 500,
     height = 300,
@@ -29,7 +29,7 @@ export function chart(
             .attr("y", 10)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
-            .text(data.y))
+            .text(data.y));
 
     const svg = d3.create('svg')
         .attr('viewBox', [0, 0, width, height]);
