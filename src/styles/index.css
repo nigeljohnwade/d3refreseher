@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Controller1';
+    src: url('../assets/fonts/Dharma Type - Controller-One.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Controller3';
+    src: url('../assets/fonts/Dharma Type - Controller-Three.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Controller5';
+    src: url('../assets/fonts/Dharma Type - Controller-Five.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Controller4Ext';
+    src: url('../assets/fonts/Dharma Type - ControllerExt-Four.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    font-family: Controller1, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    color: whitesmoke;
+    background-color: cadetblue;
+}
+
+h1{
+    font-family: Controller4Ext, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+button{
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+.controller1{
+    font-family: Controller1, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.controller3{
+    font-family: Controller3, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.controller5{
+    font-family: Controller5, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+
+.controller4Ext{
+    font-family: Controller4Ext, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}

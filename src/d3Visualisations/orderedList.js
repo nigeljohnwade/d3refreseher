@@ -6,11 +6,8 @@ export function orderedList(data) {
     orderedList
         .selectAll('li')
         .data(data)
-        .enter()
-        .append('li')
-        .text(d => d)
-        .exit()
-        .remove();
+        .join('li')
+        .text(d => `${d.key} - ${d.value}`);
 
     return orderedList.node();
 }
