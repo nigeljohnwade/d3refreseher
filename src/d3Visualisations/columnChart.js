@@ -23,7 +23,6 @@ export function columnChart(
     const yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).ticks(null, data.format))
-        .call(g => g.select(".domain").remove())
         .call(g => g.append("text")
             .attr("x", -margin.left)
             .attr("y", 10)

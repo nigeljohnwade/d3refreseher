@@ -1,7 +1,6 @@
 import './styles/index.css';
 import { columnChart } from './d3Visualisations/columnChart';
 import { barChart } from './d3Visualisations/barChart';
-import { orderedList } from './d3Visualisations/orderedList';
 import { randomiseData } from './utilities/dataUtilities';
 import { lineChart } from './d3Visualisations/lineChart';
 import { areaChart } from './d3Visualisations/areaChart';
@@ -16,7 +15,6 @@ const data = randomiseData(
     dimensions,
 );
 
-const listVis = orderedList(data);
 const columnChart1 = columnChart(data);
 const barChart1 = barChart(data);
 const lineChart1 = lineChart(data);
@@ -28,7 +26,6 @@ document.querySelector('#app-d3BarChartRoot').appendChild(barChart1);
 document.querySelector('#app-d3LineChartRoot').appendChild(lineChart1);
 document.querySelector('#app-d3AreaChartRoot').appendChild(areaChart1);
 document.querySelector('#app-d3PieChartRoot').appendChild(pieChart1);
-document.querySelector('#app-d3ListRoot').appendChild(listVis);
 
 // only register service worker in production build
 if (process.env.NODE_ENV === 'production') {

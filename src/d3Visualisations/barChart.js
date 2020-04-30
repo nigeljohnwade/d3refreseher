@@ -18,8 +18,7 @@ export function barChart(
 
     const xAxis = g => g
         .attr("transform", `translate(0,${margin.top})`)
-        .call(d3.axisTop(x).ticks(width / 80, data.format))
-        .call(g => g.select(".domain").remove());
+        .call(d3.axisTop(x).ticks(width / 80, data.format));
 
     const yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)

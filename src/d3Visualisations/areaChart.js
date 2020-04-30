@@ -8,8 +8,8 @@ export function areaChart(
     margin = {top: 30, right: 0, bottom: 30, left: 40},
     curve = 'curveLinear'
 ) {
-    const x = d3.scaleBand()
-        .domain(d3.range(data.length))
+    const x = d3.scaleLinear()
+        .domain([0, data.length])
         .range([margin.left, width - margin.right]);
 
     const y = d3.scaleLinear()
@@ -18,12 +18,11 @@ export function areaChart(
 
     const xAxis = g => g
         .attr("transform", `translate(0,${height - margin.bottom})`)
-        .call(d3.axisBottom(x).ticks(i => data[i].key).tickSizeOuter(0));
+        .call(d3.axisBottom(x).ticks(null, data.format));
 
     const yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).ticks(null, data.format))
-        .call(g => g.select(".domain").remove())
         .call(g => g.append("text")
             .attr("x", -margin.left)
             .attr("y", 10)

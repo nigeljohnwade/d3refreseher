@@ -70,8 +70,7 @@ module.exports = {
                 '    <title>D3 Refresher</title>\n' +
                 '  </head>\n' +
                 '  <body>\n' +
-                '  <div id="app-d3Root">\n' +
-                '    <div id="app-d3ListRoot"></div>\n' +
+                '  <div id="app-d3Root" class="grid-root">\n' +
                 '    <div id="app-d3BarChartRoot"></div>\n' +
                 '    <div id="app-d3ColumnChartRoot"></div>\n' +
                 '    <div id="app-d3LineChartRoot"></div>\n' +

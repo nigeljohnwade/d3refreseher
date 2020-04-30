@@ -8,7 +8,7 @@ export function pieChart(
     const radius = Math.min(width, height) / 2 * 0.8;
 
     const pie = d3.pie()
-        .sort(null)
+        .sort((a,b) => a.value < b.value ? 1 : -1)
         .value(d => d.value);
 
     const arc = d3.arc()
