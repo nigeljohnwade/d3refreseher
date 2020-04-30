@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-export function columnChart(
+export function lineChart(
     data,
     width = 500,
     height = 300,
@@ -31,18 +31,22 @@ export function columnChart(
             .attr("text-anchor", "start")
             .text(data.y));
 
+    const line = d3.line()
+        .defined(d => !isNaN(d.value))
+        .x(d => x(d.key))
+        .y(d => y(d.value));
+
     const svg = d3.create('svg')
         .attr('viewBox', [0, 0, width, height]);
 
-    svg.append('g')
-        .attr('fill', color)
-        .selectAll('rect')
-        .data(data)
-        .join('rect')
-        .attr('x', (d, i) => x(i))
-        .attr('y', d => y(d.value))
-        .attr('height', d => y(0) - y(d.value))
-        .attr('width', x.bandwidth());
+    svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", color)
+        .attr("stroke-width", 1.5)
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-linecap", "round")
+        .attr("d", line);
 
     svg.append("g")
         .call(xAxis);

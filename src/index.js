@@ -3,6 +3,9 @@ import { columnChart } from './d3Visualisations/columnChart';
 import { barChart } from './d3Visualisations/barChart';
 import { orderedList } from './d3Visualisations/orderedList';
 import { randomiseData } from './utilities/dataUtilities';
+import { lineChart } from './d3Visualisations/lineChart';
+import { areaChart } from './d3Visualisations/areaChart';
+import { pieChart } from './d3Visualisations/pieChart';
 
 const scaleFactor = 10;
 const dimensions = 1;
@@ -16,24 +19,16 @@ const data = randomiseData(
 const listVis = orderedList(data);
 const columnChart1 = columnChart(data);
 const barChart1 = barChart(data);
+const lineChart1 = lineChart(data);
+const areaChart1 = areaChart(data);
+const pieChart1 = pieChart(data);
 
 document.querySelector('#app-d3ColumnChartRoot').appendChild(columnChart1);
 document.querySelector('#app-d3BarChartRoot').appendChild(barChart1);
+document.querySelector('#app-d3LineChartRoot').appendChild(lineChart1);
+document.querySelector('#app-d3AreaChartRoot').appendChild(areaChart1);
+document.querySelector('#app-d3PieChartRoot').appendChild(pieChart1);
 document.querySelector('#app-d3ListRoot').appendChild(listVis);
-
-function getListener(e) {
-    const data = randomiseData(
-        scaleFactor,
-        Math.round((Math.random() * 5) + 10),
-        dimensions,
-    );
-    listVis
-        .selectAll('li')
-        .data(data)
-        .text(d => d);
-}
-
-document.querySelector('#app-randomiseData').addEventListener('click', getListener);
 
 // only register service worker in production build
 if (process.env.NODE_ENV === 'production') {

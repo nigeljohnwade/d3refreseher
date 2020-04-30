@@ -4,7 +4,7 @@ export function barChart(
     data,
     width = 500,
     height = 300,
-    color = 'peachpuff',
+    color = 'cadetblue',
     margin = {top: 30, right: 0, bottom: 30, left: 40},
 ) {
     const y = d3.scaleBand()

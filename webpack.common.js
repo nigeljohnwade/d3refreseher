@@ -74,6 +74,9 @@ module.exports = {
                 '    <div id="app-d3ListRoot"></div>\n' +
                 '    <div id="app-d3BarChartRoot"></div>\n' +
                 '    <div id="app-d3ColumnChartRoot"></div>\n' +
+                '    <div id="app-d3LineChartRoot"></div>\n' +
+                '    <div id="app-d3AreaChartRoot"></div>\n' +
+                '    <div id="app-d3PieChartRoot"></div>\n' +
                 '  </div>\n' +
                 '  </body>\n' +
                 '</html>\n',
